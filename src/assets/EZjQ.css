@@ -1,0 +1,7 @@
+#panel {
+    margin: 100px;
+    padding: 20px;
+    border: 1px solid red;
+    width: 300px;
+    text-align: center;
+}

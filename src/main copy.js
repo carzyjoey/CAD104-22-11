@@ -1,19 +1,22 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import App from './components/ezjquery.vue'
-// import App from './components/swiperVue.vue'
-// import App from './components/timeLine_joeyapi.vue'
+// import App from './components/axio.vue'
+// import App from './components/timeLine_joey.vue'
 
-// ===== vuetify =====
+
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
+// import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+
+// 於 main.js 引用
+// import axios from 'axios'
+// import VueAxios from 'vue-axios'
+// window.axios = require('axios');
+// Vue.use(VueAxios, axios)
 
 // import axios from 'axios';
 // Vue.prototype.$axios = axios;
-
-import jQuery from 'jquery'
-window.$ = window.jQuery = jQuery
 
 
 loadFonts()
