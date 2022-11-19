@@ -31,9 +31,6 @@
         </v-main>
       </v-layout>
     </v-card>
-    <div class="container">
-      <router-view />
-    </div>
 
     <!-- joey 元件從這裡插入 -->
     <!-- <banner></banner> -->

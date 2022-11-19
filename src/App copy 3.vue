@@ -1,67 +1,110 @@
 <template>
   <v-app>
     <!-- <div> <v-app>-->
+    <!-- <v-app-bar :elevation="7"> -->
+    <v-app-bar :clipped-left="true" :clipped-right="true">
 
-    <v-card max-width="448" class="mx-auto" color="grey-lighten-3">
-      <v-layout>
-        <v-app-bar color="teal-darken-4" image="https://picsum.photos/1920/1080?random">
-          <template v-slot:image>
-            <v-img gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"></v-img>
-          </template>
+      <!-- <v-app-bar absolute color="#fcb69f" dark shrink-on-scroll src="https://picsum.photos/1920/1080?random"
+      scroll-target="#scrolling-techniques-2"> -->
 
-          <template v-slot:prepend>
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
-          </template>
+      <!-- <template v-slot:extension>
+        <v-tabs align-with-title>
+          <v-tab>Tab 1</v-tab>
+          <v-tab>Tab 2</v-tab>
+          <v-tab>Tab 3</v-tab>
+        </v-tabs>
+      </template> -->
 
-          <v-app-bar-title>Title</v-app-bar-title>
+      <template v-slot:prepend>
+        <!-- <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon> -->
+        <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
+        <!-- <router-link class="nav-link" to="/"> Home </router-link> -->
+        <!-- <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon> -->
+        <v-app-bar-nav-icon v-if="!permanent" @click.stop="drawer = !drawer" />
 
-          <v-spacer></v-spacer>
+      </template>
 
-          <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
-          </v-btn>
+      <!-- joey focus 關鍵字在這裡 >> @click="drawer = true"-->
+      <!-- <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
 
-          <v-btn icon>
-            <v-icon>mdi-heart</v-icon>
-          </v-btn>
 
-          <v-btn icon>
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </v-app-bar>
+      <!-- <v-app-bar-title>Photos</v-app-bar-title> -->
 
-        <v-main>
-          <v-container fluid>
-            <v-row dense>
-              <v-col v-for="n in 4" :key="n" cols="12">
-                <v-card :title="`Content ${n}`" :subtitle="`Subtitle for Content ${n}`"
-                  text="Lorem ipsum dolor sit amet consectetur, adipisicing elit.?"></v-card>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-main>
-      </v-layout>
-    </v-card>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <router-link class="nav-link" to="/"> Home </router-link>
+            </li> -->
 
+      <!-- <template v-slot:append>
+
+        <v-btn icon="mdi-heart"></v-btn>
+        <v-btn icon="mdi-magnify"></v-btn>
+        <v-btn icon="mdi-dots-vertical"></v-btn>
+
+      </template> -->
+
+      <!-- <v-app-bar-nav-icon @click="drawer = true"> </v-app-bar-nav-icon> -->
+
+
+      <!-- <v-navigation-drawer v-model="drawer" absolute clipped> -->
+      <!-- <v-navigation-drawer v-model="drawer" :permanent="permanent" expand-on-hover clipped app> -->
+      
+      
+        <v-navigation-drawer permanent>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="text-h6">
+              Application
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              subtext
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider></v-divider>
+
+        <v-list dense nav>
+          <v-list-item v-for="item in items" :key="item.title" link>
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+
+
+    </v-app-bar>
     <!-- </div> </v-app>-->
   </v-app>
 </template>
 
 <script>
-import swiperVue from './components/swiperVue.vue'
-// import swiperVue from './swiperVue.vue'
-// <swiperVue></swiperVue>
-// <hover></hover>
-import hover from './components/hover.vue'
+
 
 export default {
-  name: 'navibar',
+  name: 'App',
   // props: {
   //   msg: String
   // }
   components: {
-    swiperVue,
-    hover,
+
+  },
+
+  data() {
+    return {
+      items: [
+        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
+        { title: 'Photos', icon: 'mdi-image' },
+        { title: 'About', icon: 'mdi-help-box' },
+      ],
+      right: null,
+    }
   },
 } //export default
 
