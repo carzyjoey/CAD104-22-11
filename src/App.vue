@@ -1,4 +1,5 @@
 <template>
+
   <v-app>
     <!-- <div> <v-app>-->
 
@@ -11,7 +12,7 @@
       __
       <!-- <router-link class="nav-link" to="/About2"> About2 </router-link> -->
       <!-- <router-link class="nav-link" to="/swiperVue"> swiperVue </router-link> -->
-      <router-link class="nav-link" to="/z2"> Z2 </router-link>
+      <router-link class="nav-link" to="/timeCurve"> timeCurve </router-link>
 
       <template v-slot:append>
         <!-- <v-btn icon="mdi-heart"></v-btn> -->
@@ -40,8 +41,11 @@
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
             </v-list-item-icon>
-            <router-link class="nav-link" to="/swiperVue">
+            <!-- <router-link class="nav-link" to="/swiperVue">
               <v-list-item-title>swiperVue</v-list-item-title>
+            </router-link> -->
+            <router-link class="nav-link" to="/joeyOverview">
+              <v-list-item-title>joeyOverview</v-list-item-title>
             </router-link>
           </v-list-item>
 
@@ -52,19 +56,22 @@
     <!-- router 要放 joey -->
     <hr class="my-10" color="white" />
     <router-view />
+
     <!-- </div> </v-app>-->
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
 
-
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   // props: {
   //   msg: String
   // }
   components: {
+    Footer,
   },
 
   data: () => ({

@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import App from './components/z2.vue'
+// import App from './components/grids.vue'
 // import App from './components/swiperVue.vue'
 // import App from './components/timeLine_joeyapi.vue'
 
