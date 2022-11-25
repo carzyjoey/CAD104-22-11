@@ -13,7 +13,7 @@
             <!-- 沒有像 GDS text 那麼 順風 -->
 
             <!-- <div class="timeline" v-for="(item, i) in data" :key="i"> -->
-              <div class="timeline" v-for="(item, i) in data.slice(2)" :key="i">
+              <div class="timeline" v-for="(item, i) in data.slice(1)" :key="i">
               <a href="#" class="timeline-content">
                 <span class="timeline-year">{{ item[1] }}<br>{{ item[2] }}</span>
                 
@@ -159,7 +159,7 @@ body {
   color: #909090;
   width: 50%;
   padding: 20px;
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
 }
 
@@ -407,8 +407,7 @@ export default {
 
   data: function () {
     return {
-      data: []
-      // Arr:[]
+      data: []// Arr:[]
     }
   },
   setup() {

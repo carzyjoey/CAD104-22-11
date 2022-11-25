@@ -12,7 +12,7 @@
       __
       <!-- <router-link class="nav-link" to="/About2"> About2 </router-link> -->
       <!-- <router-link class="nav-link" to="/swiperVue"> swiperVue </router-link> -->
-      <router-link class="nav-link" to="/timeCurve"> timeCurve </router-link>
+      <router-link class="nav-link" to="/testNavi"> testNavi </router-link>
 
       <template v-slot:append>
         <!-- <v-btn icon="mdi-heart"></v-btn> -->

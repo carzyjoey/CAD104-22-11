@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ▼▼▼▼ pop-up 需要 -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <!-- ▲▲▲▲ pop-up 需要 -->
+
+    <!-- 以下引用 handlebars & jQuery -->
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script type='text/javascript'
+        src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js'></script>
+    <!-- 以上引用 handlebars & jQuery -->
+
+    <!-- 以下滑鼠划過map會亮, 要加 "class="map" (modify 必遇到 2hrs debug)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.map').maphilight();
+        });
+    </script>
+    <!-- 以上滑鼠划過map會亮 -->
+
+
+    <link rel="stylesheet" href="1018tooltip_all.css">
+    <!-- <link href="/CSS/style.css" rel="stylesheet"> -->
+
+    <style>
+        .led {
+            position: absolute;
+            left: 55px;
+            top: 30px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(255, 136, 115);
+            box-shadow: inset 0px 1px 0px rgba(0, 0, 0, .1);
+            -webkit-animation: led .8s infinite;
+            -moz-animation: led .8s infinite;
+            -ms-animation: led .8s infinite;
+            -o-animation: led .8s infinite;
+            animation: led .8s infinite;
+        }
+
+        /* keyframes */
+        @-webkit-keyframes led {
+            from {
+                opacity: .2;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes led {
+            from {
+                opacity: .2;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes led {
+            from {
+                opacity: .2;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes led {
+            from {
+                opacity: .2;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes led {
+            from {
+                opacity: .2;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <title>先來一版 joey 好用的</title>
+</head>
+
+<body>
+
+    <!-- handlebars 模板 地圖的-->
+    <script id="s1Template" type="text/x-handlebars-template">
+            <div class="s1">
+                {{#each values}}
+                <area target="_blank" alt="CC" title="{{[1]}}" href="{{[4]}}" coords={{[6]}} shape="rect">
+                {{/each}}
+            </div>
+    </script>
+    <!-- <div style="margin-bottom:10px;float:left;"> -->
+    <!-- <div style="margin-bottom:400px;"> -->
+    <div style="margin: bottom 5px;">
+
+
+        <div id="image-map">
+            <!-- <img src="img\Jiufen2.png" alt="Our Locations" usemap="#image-map" class="map"> -->
+            <img src="img\G1200light.png" alt="Our Locations" usemap="#image-map" class="map" width="400">
+            <!-- height="300" -->
+            <!-- <div class="led"></div> -->
+            <map name="image-map">
+                <!-- <div class="pin pin-down" data-xpos="165" data-ypos="314"></div> -->
+                <div class="pin pin-down container" data-xpos="165" data-ypos="64">
+                    <h2>7-11</h2>
+                    <ul>
+                        <!-- <li><strong>網美 打卡</strong></li> -->
+                        <a href="https://www.google.com/maps/place/7-Eleven+%E4%B9%9D%E4%BB%BDJiufen%E9%96%80%E5%B8%82/@25.1097533,121.8452379,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipOSfn4JPIGNvyxQnXB8WKwxWuHauU5JBD-6i4k!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOSfn4JPIGNvyxQnXB8WKwxWuHauU5JBD-6i4k%3Dw397-h298-k-no!7i4032!8i3024!4m15!1m7!3m6!1s0x345d451805536779:0x29b83a838c953b84!2zMjI05paw5YyX5biC55Ge6Iqz5Y2A5Lmd5Lu9!3b1!8m2!3d25.109187!4d121.8462979!3m6!1s0x345d45182159f6b3:0x93128d9abc39637b!8m2!3d25.1097533!4d121.8452379!14m1!1BCgIgAQ"
+                            target="_blank">7-11</a>
+                    </ul>
+                </div>
+                <div class="pin pin-down" data-xpos="292" data-ypos="171">
+                    <h2>阿妹茶樓</h2>
+                    <ul>
+                        <a href="https://www.google.com/maps/place/%E9%98%BF%E5%A6%B9%E8%8C%B6%E6%A8%93/@25.1086229,121.8436066,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNCNc3mgNKKTLDswCSTA0bDO6TJJUSVXCaM1CWb!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNCNc3mgNKKTLDswCSTA0bDO6TJJUSVXCaM1CWb%3Dw448-h298-k-no!7i4995!8i3321!4m15!1m7!3m6!1s0x345d451805536779:0x29b83a838c953b84!2zMjI05paw5YyX5biC55Ge6Iqz5Y2A5Lmd5Lu9!3b1!8m2!3d25.109187!4d121.8462979!3m6!1s0x0:0x11ec86c737ace0aa!8m2!3d25.1086229!4d121.8436066!14m1!1BCgIgAQ"
+                            target="_blank">阿妹茶樓</a>
+                        <!-- <li><strong>網美 打卡</strong></li> -->
+                    </ul>
+                </div>
+                <div id="s1"></div> <!-- 真實渲染的地方 -->
+            </map>
+        </div>
+    </div>
+    <!-- <div><hr></div> -->
+
+    <!-- 3. ajax api & handlebars 載入模板 zone -->
+    <script>
+
+        $(function () {
+            $.get('https://sheets.googleapis.com/v4/spreadsheets/1EVEFyU56QLxzh4jzs4MPrRuXa3KAKkPFrZ80V6kKv9s/values/JiufenMap?alt=json&key=AIzaSyDQJnRmuvThGNBt3Z3SLRliA4crPBg6BX0', function (data_html) {    //這裡 api 接口要改 自己的 
+                console.log(data_html);
+                // 104timeLine22-09api (joeyWant22)[GDS]
+                console.log("GDS")
+                var source = $("#s1Template").html();// 載入模板 (3. 載入模板 "input")
+                var template = Handlebars.compile(source);
+                $("#s1").append(template(data_html));
+            });
+        });
+    </script>
+
+    <!-- 以下是 pop-up pin js part-->
+    <script>
+        $(document).ready(function () {
+
+            // set the image-map width and height to match the img size
+            $('#image-map').css({
+                'width': $('#image-map img').width(),
+                'height': $('#image-map img').height()
+            })
+
+            //tooltip direction
+            var tooltipDirection;
+
+            for (i = 0; i < $(".pin").length; i++) {
+                // set tooltip direction type - up or down             
+                if ($(".pin").eq(i).hasClass('pin-down')) {
+                    tooltipDirection = 'tooltip-down';
+                } else {
+                    tooltipDirection = 'tooltip-up';
+                }
+
+                // append the tooltip
+                $("#image-map").append("<div style='left:" + $(".pin").eq(i).data('xpos') + "px;top:" + $(".pin").eq(i).data('ypos') + "px' class='" + tooltipDirection + "'>\
+                                        <div class='tooltip'>" + $(".pin").eq(i).html() + "</div>\
+                                </div>");
+            }
+
+            // show/hide the tooltip
+            $('.tooltip-up, .tooltip-down').mouseenter(function () {
+                $(this).children('.tooltip').fadeIn(100);
+            }).mouseleave(function () {
+                $(this).children('.tooltip').fadeOut(100);
+            })
+        });
+    </script>
+</body>
+
+</html>

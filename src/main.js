@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import App from './components/grids.vue'
-// import App from './components/swiperVue.vue'
+// import App from './components/treeview.vue'
+// import App from './components/timeview.vue'
 // import App from './components/timeLine_joeyapi.vue'
 
 // ===== vuetify =====

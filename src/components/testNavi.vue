@@ -5,29 +5,34 @@
     <!-- joey 元件從這裡插入 -->
     <!-- <banner></banner> -->
     <hr class="my-3" color="white" />
+   
+    <!-- <hr class="my-3" color="white" /> -->
+    <imageTr></imageTr>
+    <hr class="my-3" color="white" />
     <profileCard></profileCard>
     <hr class="my-3" color="white" />
-    <Expansion></Expansion>
-    <hr class="my-3" color="white" />
+    <imgMap_iF></imgMap_iF>
     <swiperVue></swiperVue>
-    <treeview></treeview>
     <hr class="my-3" color="white" />
-    <gridsCard></gridsCard>
+    <Expansion></Expansion>
     <hr class="my-10" color="white" />
     <timeCurve></timeCurve>
     <hr class="my-3" color="white" />
     <imageGrid></imageGrid>
+    <hr class="my-3" color="white" />
+    <gridsCard></gridsCard>
 
+    <hover></hover>
     <hr class="my-10" color="white" />
     <iFrame2></iFrame2>
 
-    <!-- <hr class="my-3" color="white" /> -->
+    <hr class="my-3" color="white" />
     <!-- <card></card> -->
-    <!-- <hr class="my-3" color="white" /> -->
-    <!-- <Dcubj></Dcubj> -->
-    <!-- <hr class="my-3" color="white" /> -->
+    <hr class="my-3" color="white" />
+    <Dcubj></Dcubj>
+    <hr class="my-3" color="white" />
 
-    <hover></hover>
+    
     <!-- <Sorting></Sorting> -->
     <timeLine_joey></timeLine_joey>
     <hr class="my-3" color="white" />
@@ -42,9 +47,9 @@
 // <hover></hover>
 // <Sorting></Sorting>
 // <imageGrid></imageGrid>
-// <treeview></treeview>
-
-
+// <imageTr></imageTr>
+import imageTr from '../components/imageTr.vue'
+import imgMap_iF from '../components/imgMap_iF.vue'
 import imageGrid from '../components/imageGrid.vue'
 import profileCard from '../components/profileCard.vue'
 import swiperVue from '../components/swiperVue.vue'
@@ -55,7 +60,7 @@ import timeLine_joey from '../components/timeLine_joey.vue'
 import Expansion from '../components/Expansion.vue'
 import hover from '../components/hover.vue'
 // import timeview from '../components/timeview.vue'
-// import Dcubj from '../components/Dcubj.vue'
+import Dcubj from '../components/Dcubj.vue'
 // import banner from './components/banner.vue'
 import iFrame2 from '../components/iFrame2.vue'
 import timeCurve from '../components/timeCurve.vue'
@@ -66,7 +71,6 @@ import timeCurve from '../components/timeCurve.vue'
 // import hover from './components/hover.vue'
 // import banner from './components/banner.vue'
 import gridsCard from '../components/gridsCard.vue'
-import treeview from '../components/treeview.vue'
 
 export default {
   name: 'App',
@@ -84,13 +88,14 @@ export default {
     timeLine_joey,
     Expansion,
     // timeview,
-    // Dcubj,
+    Dcubj,
     iFrame2,
     timeCurve,
     // navibar,
     imageGrid,
     gridsCard,
-    treeview,
+    imgMap_iF,
+    imageTr,
 
   },
 } //export default

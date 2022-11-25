@@ -52,7 +52,6 @@ export default {
   //   }
   // },
 
-
   data: () => ({
     show: false,
     panel: [
