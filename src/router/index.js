@@ -8,6 +8,7 @@ import swiperVue from '../components/swiperVue.vue'
 import timeCurve from '../components/timeCurve.vue'
 // import About2 from '../components/About2.vue'
 import testNavi from '../components/testNavi.vue'
+import joeyLife2 from '../components/joeyLife2.vue'
 
 export default createRouter({
   history : createWebHistory(),
@@ -27,8 +28,9 @@ export default createRouter({
     {path: '/swiperVue',name: 'swiperVue',component: swiperVue},
     {path: '/joeyOverview',name: 'joeyOverview',component: joeyOverview},
     {path: '/timeCurve',name: 'timeCurve',component: timeCurve},
-    {path: '/testNavi',name: 'testNavi',component: testNavi}
-    // {path: '/about2',name: 'about2',component: About2}
+    {path: '/testNavi',name: 'testNavi',component: testNavi},
+    // {path: '/about2',name: 'about2',component: About2},
+    {path: '/joeyLife2',name: 'joeyLife2',component: joeyLife2}
 
   ]
 })

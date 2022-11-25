@@ -26,26 +26,31 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
-
             <router-link class="nav-link" to="/">
               <v-list-item-title>Home</v-list-item-title>
             </router-link>
-
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
             </v-list-item-icon>
-            <!-- <router-link class="nav-link" to="/swiperVue">
-              <v-list-item-title>swiperVue</v-list-item-title>
-            </router-link> -->
             <router-link class="nav-link" to="/joeyOverview">
               <v-list-item-title>joeyOverview</v-list-item-title>
+            </router-link>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-account</v-icon>
+            </v-list-item-icon>
+            <router-link class="nav-link" to="/joeyLife2">
+              <v-list-item-title>joeyLife2</v-list-item-title>
             </router-link>
           </v-list-item>
 

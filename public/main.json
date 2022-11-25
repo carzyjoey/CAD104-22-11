@@ -1,0 +1,148 @@
+{
+	"nodes": [{
+			"name": "joey biz 關係 list",
+			"image": "ctbc.png"
+		},
+		{
+			"name": "無金錢成本",
+			"image": "ts.png"
+		},
+		{
+			"name": "聯盟行銷 $300/M",
+			"image": "chb.png"
+		},
+		{
+			"name": "國際 drop shipping",
+			"image": ""
+		},
+		{
+			"name": "虛擬商品",
+			"image": ""
+		},
+		{
+			"name": "digi 買賣",
+			"image": ""
+		},
+		{
+			"name": "Stock",
+			"image": ""
+		},
+		{
+			"name": "匯率 - 國際",
+			"image": ""
+		},
+		{
+			"name": "CAD 打工",
+			"image": ""
+		},
+		{
+			"name": "new friends",
+			"image": ""
+		},
+		{
+			"name": "new ideas",
+			"image": ""
+		},
+		{
+			"name": "7-11 parttime",
+			"image": ""
+		},
+		{
+			"name": "臨時機會 - 電車經銷",
+			"image": ""
+		},
+		{
+			"name": "實體商品 - 庫存",
+			"image": ""
+		},
+		{
+			"name": "不能做",
+			"image": ""
+		},
+		{
+			"name": "實體倉庫 - 沒體力去處理",
+			"image": ""
+		}
+	],
+	"edges": [{
+			"source": 0,
+			"target": 1,
+			"relation": "A"
+		},
+		{
+			"source": 0,
+			"target": 5,
+			"relation": "B"
+		},
+		{
+			"source": 0,
+			"target": 8,
+			"relation": "C"
+		},
+		{
+			"source": 0,
+			"target": 11,
+			"relation": "D"
+		},
+		{
+			"source": 0,
+			"target": 14,
+			"relation": "E"
+		},
+		{
+			"source": 1,
+			"target": 2,
+			"relation": "好朋友"
+		},
+		{
+			"source": 1,
+			"target": 3,
+			"relation": ""
+		},
+		{
+			"source": 1,
+			"target": 4,
+			"relation": ""
+		},
+		{
+			"source": 5,
+			"target": 6,
+			"relation": ""
+		},
+		{
+			"source": 5,
+			"target": 7,
+			"relation": ""
+		},
+		{
+			"source": 8,
+			"target": 9,
+			"relation": ""
+		},
+		{
+			"source": 8,
+			"target": 10,
+			"relation": ""
+		},
+		{
+			"source": 11,
+			"target": 12,
+			"relation": ""
+		},
+		{
+			"source": 11,
+			"target": 12,
+			"relation": ""
+		},
+		{
+			"source": 11,
+			"target": 13,
+			"relation": ""
+		},
+		{
+			"source": 14,
+			"target": 15,
+			"relation": ""
+		}
+	]
+}

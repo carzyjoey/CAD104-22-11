@@ -4,10 +4,12 @@
 
     <!-- joey 元件從這裡插入 -->
     <!-- <banner></banner> -->
+    
     <hr class="my-3" color="white" />
     <profileCard></profileCard>
     <hr class="my-3" color="white" />
-    <Expansion></Expansion>
+    <iFrameForce></iFrameForce>
+    <!-- <Expansion></Expansion> -->
     <hr class="my-3" color="white" />
     <hr class="my-3" color="white" />
     <swiperVue></swiperVue>
@@ -45,7 +47,7 @@
 // <imageGrid></imageGrid>
 // <treeview></treeview>
 
-
+import iFrameForce from '../components/iFrameForce.vue'
 import imageGrid from '../components/imageGrid.vue'
 import profileCard from '../components/profileCard.vue'
 import swiperVue from '../components/swiperVue.vue'
@@ -53,7 +55,7 @@ import swiperVue from '../components/swiperVue.vue'
 import timeLine_joey from '../components/timeLine_joey.vue'
 // import card from '../components/card.vue'
 // import Sorting from '../components/Sorting.vue'
-import Expansion from '../components/Expansion.vue'
+// import Expansion from '../components/Expansion.vue'
 import hover from '../components/hover.vue'
 // import timeview from '../components/timeview.vue'
 // import Dcubj from '../components/Dcubj.vue'
@@ -70,7 +72,7 @@ import gridsCard from '../components/gridsCard.vue'
 import treeview from '../components/treeview.vue'
 
 export default {
-  name: 'joeyOverview',
+  name: 'joeyLife2',
   // props: {
   //   msg: String
   // }
@@ -83,7 +85,7 @@ export default {
     // card,
     // Sorting,
     timeLine_joey,
-    Expansion,
+    // Expansion,
     // timeview,
     // Dcubj,
     iFrame2,
@@ -92,6 +94,7 @@ export default {
     imageGrid,
     gridsCard,
     treeview,
+    iFrameForce,
 
   },
 } //export default

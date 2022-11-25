@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import App from './components/treeview.vue'
-// import App from './components/timeview.vue'
-// import App from './components/timeLine_joeyapi.vue'
+// import App from './components/joeyLife2.vue'
+// import App from './components/iFrame_force.vue'
+// import App from './components/joeyOverview.vue'
 
 // ===== vuetify =====
 import vuetify from './plugins/vuetify'
