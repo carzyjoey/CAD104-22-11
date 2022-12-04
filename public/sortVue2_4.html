@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+		
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		
+		
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	</head>
+	<body>
+		joey
+		<div id="app">
+			<v-app>
+				<v-main>
+					<!-- <v-container>Hello world</v-container> -->
+
+					<template>
+						<div>
+							<v-data-table :headers="headers" :items="desserts" item-key="name" class="elevation-1"
+								:search="search" :custom-filter="filterOnlyCapsText">
+								<template v-slot:top>
+									<v-text-field v-model="search" label="Search (UPPER CASE ONLY)" class="mx-4">
+									</v-text-field>
+								</template>
+								<template v-slot:body.append>
+									<tr>
+										<td></td>
+										<td>
+											<v-text-field v-model="calories" type="number" label="Less than">
+											</v-text-field>
+										</td>
+										<td colspan="4"></td>
+									</tr>
+								</template>
+							</v-data-table>
+						</div>
+					</template>
+
+				</v-main>
+			</v-app>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+		<script>
+			new Vue({
+				el: '#app',
+				vuetify: new Vuetify(),
+
+
+				data() {
+					return {
+						search: '',
+						calories: '',
+						// desserts: [{
+						// 		name: 'Frozen Yogurt',
+						// 		calories: 159,
+						// 		fat: 6.0,
+						// 		carbs: 24,
+						// 		protein: 4.0,
+						// 		iron: '1%',
+						// 	},
+						// 	{
+						// 		name: 'Ice cream sandwich',
+						// 		calories: 237,
+						// 		fat: 9.0,
+						// 		carbs: 37,
+						// 		protein: 4.3,
+						// 		iron: '1%',
+						// 	},
+						// ],
+						
+						// items: [],
+						desserts: [],
+						
+						
+						// [
+						//   {
+						//     "iterm": 1,
+						//     "name": 2022,
+						//     "職稱": "機構工程師\n機構工程師\nLCD 模組的工作涵蓋的技術更多 (色彩學，幾何光學，機構…)，包含的零件更多。初次參加專案，開會成員矩陣就包含迴路，Array，Cell，設計，工廠，PM 就有三十幾人。",
+						//     "公司": "邑升科技有限公司"
+						//   },
+						//   {
+						//     "iterm": 2,
+						//     "name": "2010~",
+						//     "職稱": "機構工程師",
+						//     "公司": "中華映管股份有限公司"
+						//   }
+						// ],
+						
+						
+					}
+				},
+				computed: {
+					headers() {
+						return [{
+								text: 'Dessert (100g serving)',
+								align: 'start',
+								sortable: false,
+								value: 'name',
+								// value: desserts[2],
+							},
+							{
+								text: 'Calories',
+								value: 'calories',
+								filter: value => {
+									if (!this.calories) return true
+
+									return value < parseInt(this.calories)
+								},
+							},
+							{
+								text: 'Fat (g)',
+								value: 'fat'
+							},
+							// { text: 'Carbs (g)', value: 'carbs' },
+							// { text: 'Protein (g)', value: 'protein' },
+							// { text: 'Iron (%)', value: 'iron' },
+						]
+				 },
+				},
+				methods: {
+					filterOnlyCapsText(value, search, item) {
+						return value != null &&
+							search != null &&
+							typeof value === 'string' &&
+							value.toString().toLocaleUpperCase().indexOf(search) !== -1
+					},
+				},
+				mounted() {
+					// console.log("mountedj");
+					axios.
+					get(
+							// 'https://randomuser.me/api/?results=5'
+							'https://sheets.googleapis.com/v4/spreadsheets/1EVEFyU56QLxzh4jzs4MPrRuXa3KAKkPFrZ80V6kKv9s/values/CAD104vue?alt=json&key=AIzaSyDQJnRmuvThGNBt3Z3SLRliA4crPBg6BX0'
+						)
+						.then(response => { // 使用箭頭函示 this 才不會跑掉
+							// console.log(response);
+							// this.data = response.data.results;
+							// Arr.value = response.data.results;
+							// this.data = response.data.values
+							this.desserts = response.data.values
+							console.log(this.desserts);
+							console.log("joey is " + this.desserts[1]);
+							// Arr.value = response.data.values;
+							const obj = {...this.desserts};
+							console.log(obj);
+							console.log("AA");
+
+							this.show = true
+						})
+
+				}
+
+
+
+
+			}) //new Vue
+		</script>
+	</body>
+</html>

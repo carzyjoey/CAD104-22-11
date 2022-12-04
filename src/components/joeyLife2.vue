@@ -8,6 +8,7 @@
     <hr class="my-3" color="white" />
     <profileCard></profileCard>
     <hr class="my-3" color="white" />
+    <iFrameSortTable></iFrameSortTable>
     <iFrameForce></iFrameForce>
     <!-- <Expansion></Expansion> -->
     <hr class="my-3" color="white" />
@@ -46,7 +47,9 @@
 // <Sorting></Sorting>
 // <imageGrid></imageGrid>
 // <treeview></treeview>
+// <iFrameSortTable></iFrameSortTable>
 
+import iFrameSortTable from '../components/iFrameSortTable.vue'
 import iFrameForce from '../components/iFrameForce.vue'
 import imageGrid from '../components/imageGrid.vue'
 import profileCard from '../components/profileCard.vue'
@@ -95,6 +98,7 @@ export default {
     gridsCard,
     treeview,
     iFrameForce,
+    iFrameSortTable,
 
   },
 } //export default

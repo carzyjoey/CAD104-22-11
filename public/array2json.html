@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			const arr = ["foo", "boo", "zoo"];
+			const obj = {
+				...arr
+			};
+			console.log(obj); //{0: "foo", 1: "boo", 2: "zoo"}
+			console.log(arr); //['foo', 'boo', 'zoo']
+
+			// 這一關遲早要過, data 處理 就是 model 好比 做一 矩陣 in DL.
+			// [["a","b","c"],["a","b","c"]] >> [{0:"a",1:"b",2:"c"},{0:"a",1:"b",2:"c"}]
+			const arr2 = [["a", "b", "c"],["a", "b", "c"]]
+			const obj2 = arr2.forEach(unction(value){
+				...value
+			});
+			console.log(obj2);
+			
+		</script>
+	</body>
+</html>
