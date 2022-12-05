@@ -12,12 +12,13 @@
       <v-toolbar-title>Joey Portfolio</v-toolbar-title>
 
       <v-spacer></v-spacer>
+      <!-- 三大解題報告 -->
       <router-link class="nav-link" to="/"> Home </router-link>
       __
       <router-link class="nav-link" to="/About"> About </router-link>
       __
       <router-link class="nav-link" to="/testNavi"> testNavi </router-link>
-
+      <!-- 三大解題報告 -->
       <v-btn variant="text" icon="mdi-magnify"></v-btn>
       <v-btn variant="text" icon="mdi-filter"></v-btn>
       <v-btn variant="text" icon="mdi-dots-vertical"></v-btn>
@@ -27,10 +28,12 @@
 
     <!-- <v-navigation-drawer v-model="drawer" location="bottom" temporary> -->
     <v-navigation-drawer v-model="drawer" location="top" temporary>
-      <v-list :items="items"></v-list>
+      <!-- <v-list :items="items"></v-list> -->
+
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
 
+          <!-- 抽屜 router 插入點 -->
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
@@ -57,6 +60,7 @@
               <v-list-item-title>joeyLife2</v-list-item-title>
             </router-link>
           </v-list-item>
+          <!-- 抽屜 router 插入點 -->
 
         </v-list-item-group>
       </v-list>

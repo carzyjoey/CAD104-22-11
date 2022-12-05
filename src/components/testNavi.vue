@@ -14,6 +14,7 @@
     <imgMap_iF></imgMap_iF>
     <swiperVue></swiperVue>
     <hr class="my-3" color="white" />
+    <imageGridG12sop></imageGridG12sop>
     <Expansion></Expansion>
     <hr class="my-10" color="white" />
     <timeCurve></timeCurve>
@@ -47,7 +48,8 @@
 // <hover></hover>
 // <Sorting></Sorting>
 // <imageGrid></imageGrid>
-// <imageTr></imageTr>
+// <imageGridG12sop></imageGridG12sop>
+import imageGridG12sop from '../components/imageGridG12sop.vue'
 import imageTr from '../components/imageTr.vue'
 import imgMap_iF from '../components/imgMap_iF.vue'
 import imageGrid from '../components/imageGrid.vue'
@@ -96,6 +98,7 @@ export default {
     gridsCard,
     imgMap_iF,
     imageTr,
+    imageGridG12sop,
 
   },
 } //export default

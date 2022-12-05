@@ -12,6 +12,7 @@
     <iFrameForce></iFrameForce>
     <!-- <Expansion></Expansion> -->
     <hr class="my-3" color="white" />
+    <siteMap2></siteMap2>
     <hr class="my-3" color="white" />
     <swiperVue></swiperVue>
     <treeview></treeview>
@@ -48,7 +49,7 @@
 // <imageGrid></imageGrid>
 // <treeview></treeview>
 // <iFrameSortTable></iFrameSortTable>
-
+import siteMap2 from '../components/siteMap2.vue'
 import iFrameSortTable from '../components/iFrameSortTable.vue'
 import iFrameForce from '../components/iFrameForce.vue'
 import imageGrid from '../components/imageGrid.vue'
@@ -99,6 +100,7 @@ export default {
     treeview,
     iFrameForce,
     iFrameSortTable,
+    siteMap2,
 
   },
 } //export default

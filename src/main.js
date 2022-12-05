@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import App from './AppDrawV.vue'
-// import App from './components/joeyLife2.vue'
-// import App from './components/iFrame_force.vue'
+// import App from './imageGridG12sop.vue'
+// import App from './components/imageGridG12sop.vue'
+// import App from './components/siteMap2.vue'
 // import App from './components/iFrameSortTable.vue'
 
 // ===== vuetify =====
